@@ -8,7 +8,7 @@ TARGET_URL=$1
 docker exec $CONTAINER_ID zap-cli -p 2375 status -t 120 && docker exec $CONTAINER_ID zap-cli -p 2375 open-url $TARGET_URL
 docker exec $CONTAINER_ID zap-cli -p 2375 spider $TARGET_URL
 docker exec $CONTAINER_ID zap-cli -p 2375 active-scan -r $TARGET_URL
-docker exec $CONTAINER_ID zap-cli -p 2375 alerts
+docker exec $CONTAINER_ID zap-cli -p 2375 alerts -r testreport.html
 
 # docker logs [container ID or name]
 divider==================================================================
